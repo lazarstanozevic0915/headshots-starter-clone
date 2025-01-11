@@ -31,9 +31,9 @@ const StripePricingTable = ({ user }: Props) => {
       document.body.removeChild(script);
     }
   }, []);
-
+  
   return (
-    <div className='flex flex-1 flex-col w-full'>
+    <div className='flex flex-col flex-1 w-full'>
       <stripe-pricing-table
           pricing-table-id="prctbl_1QfneRCvesibYxsTUFonPAcO"
           publishable-key="pk_test_51QffEdCvesibYxsTSHvfchXClQbnyKM2IMCyG2VcMN3gtAsxlxusyTjSt8MTPkzkzbb4Qpu30yd75b5dP51sDfwC00GiBytF6A"

@@ -138,7 +138,7 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   }
-  
+
   // Get the modelId from the created model
   const modelId = data?.id;
 
@@ -193,6 +193,12 @@ export async function POST(request: Request) {
       },
     };
 
+    console.log(tuneBody);
+
+    console.log(packBody);
+
+
+
     const response = await axios.post(
       DOMAIN + (packsIsEnabled ? `/p/${pack}/tunes` : "/tunes"),
       packsIsEnabled ? packBody : tuneBody,
@@ -205,6 +211,9 @@ export async function POST(request: Request) {
     );
 
     const { status } = response;
+
+    console.log(response);
+    
 
     if (status !== 201) {
       console.error({ status });
